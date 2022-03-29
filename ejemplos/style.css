@@ -1,0 +1,60 @@
+.contenedor {
+  display: grid;
+  /* Columnas */
+  /* grid-template-columns: 1fr 1fr 2fr; */
+
+  /* Utilizando la unidad de medida fr, que permite establecer la cantidad de espacio que ocupara un elemento dentro del área disponible , es decir , 1 fr es igual a una parte del espacio disponible, de esta manera podemos definir el espacio de ocupara cada elemento y la cantidad de columnas que tendrá el espacio.
+
+ */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* grid-template-rows: 200px 400px; */
+  grid-template-rows: repeat(1, 2fr) repeat(1, 1fr);
+
+  /* Espacio entre celdas*/
+  gap: 20px;
+}
+
+.grid .item:hover {
+  border: 1px solid yellow;
+}
+
+.item {
+  border: 3px solid #ffffff;
+  padding: 1rem;
+  font-family: arial;
+  color: white;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgb(179, 97, 234) 0%,
+    rgb(221, 229, 235) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  padding: 1em;
+}
+/* también podremos establecer estos valores en cada celda individual, incluso superponiendo celdas con otras, esto lo podemos lograr con las propiedades: */
+
+/* -grid-column-start: el lugar de inicio entre las columnas que ocupara esta celda o item.
+-grid-column-end el lugar final entre las columnas que ocupara esta celda o item.
+-grid-row-start: el lugar de inicio entre las filas que ocupara esta celda o item.
+-grid-row-end el lugar final entre las filas que ocupara esta celda o item. */
+.one {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  /* z-index: 2; */
+}
+/* Con este método también podemos superponer celdas determinando la relevancia de cada uno mediante la propiedad z-index: */
+.two {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* La propiedad grid-template-areas permite ponerle nombres a cada una de las celdas, determinado el espacio que ocuparan y la ubicación de estas.  */

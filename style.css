@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #3c3c3c;
+}
+
+.general_cont {
+  width: 100vw;
+  height: 100vh;
+  background: #e7e7e7;
+  /* Para activar la cuadrícula grid hay que determinar sobre el elemento contenedor la propiedad display y especificar el valor grid o inline-grid */
+
+  /*  Este valor determina como se comportará la cuadrícula con el contenido exterior. El primero permite que la cuadrícula aparezca encima/debajo del contenido exterior (en bloque) y el segundo de ellos permite que la cuadrícula se muestre de izquierda/derecha (en línea) del contenido exterior.
+   */
+  display: grid;
+  /* The grid-template CSS property is a shorthand property for defining grid columns, rows, and areas. */
+  /*  columnas de plantilla grid cada valor es una columna (ancho)   */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*  filas de plantilla grid cada valor es una fila (alto)  */
+  /*    grid-template-rows: 20% 20% 20% 20% 20%;*/
+  grid-template-rows: 50px 130px 1fr 1fr;
+
+  /* Con esta propiedad definiremos el espaciado que habrá entre las filas y columnas, pudiendo ser especificadas en pixeles o porcentaje. */
+  gap: 15px;
+}
+
+.header {
+  background: #3b5998;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.menu_left {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  background-color: aqua;
+  /*    border:1px solid white;*/
+  /* padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  */
+}
+
+.profile {
+  /* margin: 1rem 0 3rem 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; */
+}
+
+.directory_item {
+  /* flex: 2;
+  padding: 0.5rem; */
+}
+
+.directory_item.first {
+  /* flex: 1; */
+}
+
+.profile_pic {
+  /* background: navy;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%; */
+}
+
+.menu_right_bottom {
+}
+
+.top_content {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: red;
+}
+
+.central_content {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-color: rgb(120, 177, 120);
+}
+
+.menu_right_top {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: aquamarine;
+  /*    son equivalentes 👇👆🏽 */
+  /*    grid-area: 2 / 3 / 4 / 4; */
+}
+
+.menu_right_bottom {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: #3b5998;
+}
