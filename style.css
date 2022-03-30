@@ -76,6 +76,7 @@ body {
   grid-row-end: 3;
   background-color: rgb(177, 57, 214);
   color: green;
+  color: red;
 }
 
 .central_content {
